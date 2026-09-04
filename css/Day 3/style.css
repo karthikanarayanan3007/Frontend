@@ -1,0 +1,20 @@
+.parent{
+    background-color: black;
+    color: black;
+    padding: 10px;
+    border: 5px;
+    margin: 20px;
+    width: 250px;
+}
+
+.boxone{
+    background-color: azure;
+    color: black;
+    
+}
+.boxone > img{
+    width: 250px;
+    height: 200px;
+    
+
+}
