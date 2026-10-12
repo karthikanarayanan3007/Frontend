@@ -1,13 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dom</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript DOM Event Tasks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: black;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    section {
+      margin-bottom: 30px;
+      padding: 15px;
+      border: 1px solid #cccccc;
+    }
+
+    button {
+      margin: 5px;
+      padding: 8px 14px;
+      cursor: pointer;
+    }
+
+    #colorBox {
+      width: 250px;
+      padding: 30px;
+      margin-bottom: 10px;
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+    }
+
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-    <script src="./Asset/js/script.js"></script>
-    <h1 id="text">Hello ALL</h1>
-<button id="btn">Click Here</button>
+  <h1>JavaScript DOM Event Practice</h1>
+
+  
+  <section>
+    <h2 id="colorHeading">Task 1 Heading</h2>
+    <button id="changeHeadingButton">click</button>
+  </section>
+
+
+  <section>
+    <div id="colorBox">Task 2 Box</div>
+    <button id="blueButton">Blue Background</button>
+    <button id="yellowButton">Yellow Background</button>
+  </section>
+
+
+  <section>
+    <p id="showHideParagraph">This paragraph can be hidden and shown.</p>
+    <button id="hideButton">Hide</button>
+    <button id="showButton">Show</button>
+  </section>
+
+  <section>
+    <h2 id="toggleHeading">This heading can be toggled.</h2>
+    <button id="toggleButton">Toggle Heading</button>
+  </section>
+
+  <script src="./Asset/js/script.js"></script>
 </body>
 </html>
