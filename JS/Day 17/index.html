@@ -8,5 +8,56 @@
 <body>
     <script src="Asset/js/script.js"></script>
     
+
+
+    <h1>Login and Register</h1>
+
+    <button id="loginTab">Login</button>
+    <button id="registerTab">Register</button>
+
+    <!-- Login Form -->
+    <form id="loginForm">
+        <h2>Login</h2>
+
+        <input type="email" id="loginEmail" placeholder="Enter Email" required>
+        <br><br>
+
+        <input type="password" id="loginPassword" placeholder="Enter Password" required>
+        <br><br>
+
+        <button type="submit">Login</button>
+
+        <p id="loginMessage"></p>
+    </form>
+
+    <!-- Register Form -->
+    <form id="registerForm" hidden>
+        <h2>Register</h2>
+
+        <input type="text" id="registerName" placeholder="Enter Name" required>
+        <br><br>
+
+        <input type="email" id="registerEmail" placeholder="Enter Email" required>
+        <br><br>
+
+        <input type="password" id="registerPassword" placeholder="Create Password" minlength="6" required>
+        <br><br>
+
+        <button type="submit">Register</button>
+
+        <p id="registerMessage"></p>
+    </form>
+
+    <!-- Dashboard -->
+    <div id="dashboard" hidden>
+        <h2 id="welcomeMessage"></h2>
+        <p>Login Successful!</p>
+        <button id="logoutButton">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
+
+    
