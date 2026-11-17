@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 - Bootstrap Grid System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background: linear-gradient(120deg, #7b1597, #e5a2c7, #fff0c8); background-attachment: fixed; min-height: 100vh; }
+        .back-btn { text-decoration: none; color: #7925d5; font-weight: 700; font-size: 15px; }
+        .back-btn:hover { color: #5a1aaa; }
+        .day-badge { display: inline-block; padding: 8px 22px; background: #ffffffde; color: #6820ad; border-radius: 40px; font-size: 13px; font-weight: 800; letter-spacing: 1px; }
+        .task-card { border-radius: 20px; border: 1px solid #ffffffd9; box-shadow: 0 8px 20px #44204c20; transition: transform 0.3s; }
+        .task-card:hover { transform: translateY(-5px); }
+        .task-number { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #8c8aff, #5751ed); color: white; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; flex-shrink: 0; }
+        .page-title { font-size: clamp(28px, 4vw, 48px); font-weight: 800; letter-spacing: -1px; }
+        .page-title span { color: #7020ce; }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="mb-4">
+            <a href="../index.html" class="back-btn"><i class="fa-solid fa-arrow-left me-2"></i>Back to Bootstrap Tasks</a>
+        </div>
+        <div class="text-center mb-5">
+            <span class="day-badge mb-3 d-inline-block">DAY 3 OF 6</span>
+            <h1 class="page-title">Bootstrap <span>Grid System</span></h1>
+            <p class="text-muted mt-2" style="font-size:15px;">Master Bootstrap's powerful 12-column responsive grid layout system.</p>
+            <div style="width:90px;height:5px;margin:15px auto 0;border-radius:10px;background:linear-gradient(90deg,#b63ddc,#6920d5);"></div>
+        </div>
+        <div class="row g-4">
+            <div class="col-12">
+                <div class="task-card p-4 bg-white">
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="task-number">1</div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Grid Basics</h5>
+                            <p class="text-muted mb-2" style="font-size:14px;">Understand the 12-column grid system. Use container, row, and col classes to create simple column layouts.</p>
+                            <span class="badge" style="background:#efe4ff;color:#6820ad;font-size:12px;">Grid</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="task-card p-4" style="background:linear-gradient(135deg,#f5f9e9,#d5eeff);">
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="task-number">2</div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Responsive Breakpoints</h5>
+                            <p class="text-muted mb-2" style="font-size:14px;">Use breakpoint prefixes (col-sm, col-md, col-lg, col-xl) to make layouts adapt across different screen sizes.</p>
+                            <span class="badge" style="background:#ffffffa8;color:#54208b;font-size:12px;">Responsive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="task-card p-4 bg-white">
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="task-number">3</div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Offset & Order Classes</h5>
+                            <p class="text-muted mb-2" style="font-size:14px;">Control column position using offset classes (offset-md-*) and reorder columns visually using order classes.</p>
+                            <span class="badge" style="background:#efe4ff;color:#6820ad;font-size:12px;">Layout</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="task-card p-4" style="background:linear-gradient(135deg,#f5f9e9,#d5eeff);">
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="task-number">4</div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Nested Grids</h5>
+                            <p class="text-muted mb-2" style="font-size:14px;">Create complex layouts by nesting rows and columns inside existing grid columns.</p>
+                            <span class="badge" style="background:#ffffffa8;color:#54208b;font-size:12px;">Nesting</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="task-card p-4 bg-white">
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="task-number">5</div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Gutters & Gap Utilities</h5>
+                            <p class="text-muted mb-2" style="font-size:14px;">Use gutter classes (g-*, gx-*, gy-*) to control spacing between columns and rows in the grid.</p>
+                            <span class="badge" style="background:#efe4ff;color:#6820ad;font-size:12px;">Gutters</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="text-center mt-5 pb-3" style="font-size:13px;font-weight:500;">
+            <p>Made with <span style="color:#d51b78;">&#9829;</span> | Frontend Development</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

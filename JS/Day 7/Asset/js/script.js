@@ -119,6 +119,9 @@ for(let a=0;a<ij.length;a++){
 //intial and print
 let ka=["fineshed the array work"]
 console.log(ka);
+//obj
+//num
+let kl={}
 
 
 

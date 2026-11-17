@@ -1,0 +1,271 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff8ee;
+  color: #321b3d;
+}
+
+.navbar {
+  background: #190d2b;
+  padding: 22px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar h2 {
+  color: #f5cb7c;
+  font-family: 'Playfair Display', serif;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #f5cb7c;
+}
+
+.hero {
+  min-height: 620px;
+  background: linear-gradient(135deg, #170b29, #46234e, #1d1033);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 70px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.subtitle {
+  color: #e8b96c;
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(45px, 7vw, 85px);
+  line-height: 1.15;
+}
+
+.hero h1 span {
+  color: #f5cb7c;
+}
+
+.hero > p:not(.subtitle) {
+  color: #e4d9e8;
+  margin-top: 20px;
+}
+
+.explore {
+  margin-top: 30px;
+  background: #f5cb7c;
+  color: #291633;
+  padding: 13px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.explore:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px #f5cb7c55;
+}
+
+.diya {
+  font-size: 35px;
+  margin-top: 55px;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { filter: drop-shadow(0 0 5px #ffbd58); }
+  to { filter: drop-shadow(0 0 20px #ffbd58); }
+}
+
+.story, .gallery, .sweets {
+  padding: 90px 7%;
+  text-align: center;
+}
+
+.story h2, .gallery h2, .sweets h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-bottom: 45px;
+}
+
+.activities {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.activities article {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid #f0dfca;
+  box-shadow: 0 8px 25px #321b3d0b;
+  font-size: 14px;
+  line-height: 1.8;
+  transition: 0.3s;
+}
+
+.activities article:hover {
+  transform: translateY(-8px);
+  border-color: #d9ad68;
+}
+
+.activities h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  margin: 12px 0;
+  color: #8c5a36;
+}
+
+.sweets {
+  background: #241334;
+  color: white;
+}
+
+.sweet-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.sweet-list div {
+  background: #41284c;
+  padding: 35px 15px;
+  border: 1px solid #ffffff20;
+  border-radius: 18px;
+  font-size: 40px;
+  transition: 0.3s;
+}
+
+.sweet-list div:hover {
+  transform: translateY(-8px) rotate(-2deg);
+}
+
+.sweet-list h3 {
+  font-size: 18px;
+  margin-top: 15px;
+  color: #f5cb7c;
+  font-family: 'Playfair Display', serif;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.photo-grid div {
+  height: 250px;
+  border: 2px dashed #c8a875;
+  border-radius: 18px;
+  background: #f4e8d6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #8c5a36;
+  font-size: 35px;
+  transition: 0.3s;
+}
+
+.photo-grid div:hover {
+  background: #f0dfc8;
+  transform: scale(1.02);
+}
+
+.photo-grid p {
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.ending {
+  background: linear-gradient(135deg, #170b29, #46234e);
+  color: white;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.fireworks {
+  font-size: 35px;
+  margin-bottom: 25px;
+  animation: glow 2s infinite alternate;
+}
+
+.ending h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 55px;
+  color: #f5cb7c;
+}
+
+.ending p {
+  margin: 20px 0 40px;
+  color: #e4d9e8;
+}
+
+.ending h3 {
+  font-size: 13px;
+  color: #f5cb7c;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .navbar a {
+    margin: 8px;
+    display: inline-block;
+  }
+
+  .activities {
+    grid-template-columns: 1fr;
+  }
+
+  .sweet-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story h2, .gallery h2, .sweets h2 {
+    font-size: 32px;
+  }
+}
