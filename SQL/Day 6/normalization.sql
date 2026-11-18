@@ -34,9 +34,9 @@ create table department(
  
  
  
-create database studentmanagement;
-use studentmanagement;
-drop database studentmanagement;
+create database studentdb;
+use studentdb;
+
 
 create table studentcourse (
     studentid int,
@@ -46,58 +46,79 @@ create table studentcourse (
     trainerphone varchar(30),
     primary key (studentid, coursename)
 );
-insert into studentcourse values
-(101, 'arun', 'python', 'kumar', '9876543210'),
-(101, 'arun', 'java', 'ravi', '9876543211'),
-(102, 'priya', 'python', 'kumar', '9876543210'),
-(103, 'divya', 'java', 'ravi', '9876543211'),
-(104, 'rahul', 'sql', 'suresh', '9876543212');
 
-select * from studentcourse;
-create table students (
+insert into studentcourse values
+(1, 'arun', 'java', 'kumar', '9876543210'),
+(1, 'arun', 'python', 'ravi', '9876543211'),
+(2, 'maya', 'java', 'kumar', '9876543210'),
+(3, 'priya', 'python', 'ravi', '9876543211'),
+(4, 'rahul', 'sql', 'suresh', '9876543212');
+
+create table student (
     studentid int primary key,
     studentname varchar(30)
 );
 
-create table courses (
-    coursename varchar(30) primary key,
+insert into student values
+(1, 'arun'),
+(2, 'maya'),
+(3, 'priya'),
+(4, 'rahul');
+
+create table course (
+    courseid int primary key,
+    coursename varchar(30),
     trainername varchar(30),
     trainerphone varchar(30)
 );
 
-create table studentenrollment (
+insert into course values
+(101, 'java', 'kumar', '9876543210'),
+(102, 'python', 'ravi', '9876543211'),
+(103, 'sql', 'suresh', '9876543212');
+
+create table studentcoursemap (
     studentid int,
-    coursename varchar(30),
-    primary key (studentid, coursename),
-    foreign key (studentid) references students(studentid),
-    foreign key (coursename) references courses(coursename)
+    courseid int,
+    primary key (studentid, courseid),
+    foreign key (studentid) references student(studentid),
+    foreign key (courseid) references course(courseid)
 );
-insert into students values
-(101, 'arun'),
-(102, 'priya'),
-(103, 'divya'),
-(104, 'rahul');
 
-insert into courses values
-('python', 'kumar', '9876543210'),
-('java', 'ravi', '9876543211'),
-('sql', 'suresh', '9876543212');
+insert into studentcoursemap values
+(1, 101),
+(1, 102),
+(2, 101),
+(3, 102),
+(4, 103);
 
-insert into studentenrollment values
-(101, 'python'),
-(101, 'java'),
-(102, 'python'),
-(103, 'java'),
-(104, 'sql');
 
-create table trainers (
+create table trainer (
     trainerid int primary key,
     trainername varchar(30),
     trainerphone varchar(30)
 );
 
-insert into trainers values
+insert into trainer values
 (1, 'kumar', '9876543210'),
 (2, 'ravi', '9876543211'),
 (3, 'suresh', '9876543212');
 
+create table course3nf (
+    courseid int primary key,
+    coursename varchar(30),
+    trainerid int,
+    foreign key (trainerid) references trainer(trainerid)
+);
+
+insert into course3nf values
+(101, 'java', 1),
+(102, 'python', 2),
+(103, 'sql', 3);
+
+
+select s.studentname, c.coursename, t.trainername
+from student s
+join studentcoursemap sc on s.studentid = sc.studentid
+join course3nf c on sc.courseid = c.courseid
+join trainer t on c.trainerid = t.trainerid;
